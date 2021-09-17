@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CLIENT WEBSOCKET</title>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            font-family: Consolas;
+        }
+        .ben_trai {
+            width: 50%;
+            float: left;
+        }
+
+        .ben_phai {
+            width: 50%;
+            float: right;
+        }
+        .button {
+		  padding: 15px 25px;
+		  font-size: 24px;
+		  text-align: center;
+		  cursor: pointer;
+		  outline: none;
+		  color: #fff;
+		  background-color: #4CAF50;
+		  border: none;
+		  border-radius: 15px;
+		  box-shadow: 0 9px #999;
+		}
+		.button:hover {background-color: #3e8e41}
+
+		.button:active {
+		  background-color: #3e8e41;
+		  box-shadow: 0 5px #666;
+		  transform: translateY(4px);
+		}
+    </style>
+    <script src="xuliketnoi.js"></script>
+    <script src="device_main_chart.js"></script>
+    <script src="device_chart.js"></script>
+</head>
+<body>
+    <form>
+        Ket noi IPAddress ESP266    
+        <input type="text"
+               id="endpoint"
+               name="endpoint"
+               value="ws://192.168.1.4:81"
+               style="width: 200px"
+               autocomplete="on" />
+        <input type="button" onclick="connectToWS()" value="Connect" />
+    </form>
+    <br />
+    <form>
+        <td><input class="button" type="button" onclick="LED_TOGGLE()" value="LED TOGGLE"  /></td>
+        <td><input type="text" id="myMessage" name="myMessage" value="on" hidden  /></td>          
+    </form>
+    <br />
+    <input type="button" onclick="closeConn()" value="Close connection" />
+    <br />
+    <br />
+    <form>
+        <textarea id="output" style="width:500px;height:300px;"></textarea><br />
+        <input onclick="clearLog()" type="button" value="Clear" /><br />
+    </form>
+    <h2 class ="ben_trai">
+        TEMPERATURE
+        <span id="val_temp">text_1</span>
+    </h2>
+    <h2 class ="ben_phai" style="text-align: right">
+        HUMIDITY
+        <span id="val_humidity">text_2</span>
+    </h2>
+    <div class="ben_trai" id="chartContainer_temp" style="height: 300px; width: 40%;"></div>
+    <div class="ben_phai" id="chartContainer_humidity" style="height: 300px; width: 40%;"></div>
+   
+    <!-- NUT BAM TEST BIEU DO
+    <h1 id="cnt_temp">temp</h1>
+    <input type="button" value="COUNT" onclick="TEMP()">
+    <h1 id="cnt_humidity">humidity</h1>
+    <input type="button" value="COUNT" onclick="HUMIDITY()">
+        -->
+</body>
+</html>
