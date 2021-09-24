@@ -56,13 +56,13 @@ Open file wsk_client.html and connect to IP Adress of Esp8266. After the connect
       ├── espweb2.jpg
       ├── espweb3.jpg
 ├── data
-      ├── dangnhap.html     : Page connect wifi for Esp8266
+      ├── dangnhap.html    	 : Page connect wifi for Esp8266
       ├── device_chart.js
       ├── device_main_chart.js
-      ├── wsk_client.html   : Websocket client communicate with Esp8266
+      ├── wsk_client.html  	 : Websocket client communicate with Esp8266
       ├── xuliketnoi.js
 ├── WebServer.ino		: Sensor library
-├── device.h        : Simulate value from sensor
+├── device.h      		  : Simulate value from sensor
 ├── device.cpp
 
 ```
